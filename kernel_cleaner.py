@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
 """
+Automatic uninstaller of the oldest unused Linux kernel
+Designed for DEBIAN-based systems
+Author: Nannouche
+
+
 Désinstallateur automatique du plus ancien noyau Linux non utilisé
 Conçu pour les systèmes basés sur DEBIAN
 Auteur: Nannouche
