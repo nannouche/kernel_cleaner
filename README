@@ -1,0 +1,95 @@
+📋 Utilisation
+Installation et exécution :
+
+# Sauvegarder le script
+chmod +x kernel_cleaner.py
+
+# Voir le statut des noyaux (sans privilèges root)
+python3 kernel_cleaner.py --status
+
+# Simulation (voir ce qui serait supprimé)
+python3 kernel_cleaner.py --dry-run
+
+# Suppression réelle (nécessite sudo)
+sudo python3 kernel_cleaner.py
+
+# Mode verbeux
+sudo python3 kernel_cleaner.py --verbose
+
+Options disponibles :
+
+-s, --status : Affiche l'état des noyaux installés
+-n, --dry-run : Simulation sans suppression réelle
+-v, --verbose : Mode verbeux avec plus d'informations
+
+🛡️ Sécurités intégrées
+
+Protection du noyau actuel : Impossible de supprimer le noyau en cours
+Noyau de sauvegarde : Garde toujours au moins un noyau alternatif
+Confirmation : Demande confirmation avant toute suppression
+Vérification des privilèges : Vérifie les permissions root
+Mise à jour GRUB : Met à jour automatiquement le bootloader
+
+🔍 Exemple d'utilisation
+
+# D'abord, voir l'état actuel
+python3 kernel_cleaner.py --status
+
+# Ensuite, tester en mode simulation
+python3 kernel_cleaner.py --dry-run
+
+# Enfin, supprimer réellement
+sudo python3 kernel_cleaner.py
+
+----------------------------------------------------------------------------------
+
+📋 Usage
+Installation and Execution
+
+# Make the script executable
+chmod +x kernel_cleaner.py
+
+# Check the status of installed kernels (no root privileges needed)
+python3 kernel_cleaner.py --status
+
+# Simulate removal (see what would be deleted)
+python3 kernel_cleaner.py --dry-run
+
+# Perform actual cleanup (requires sudo)
+sudo python3 kernel_cleaner.py
+
+# Verbose mode
+sudo python3 kernel_cleaner.py --verbose
+
+Available Options
+
+    -s, --status : Show the status of installed kernels
+
+    -n, --dry-run : Simulate cleanup without deleting anything
+
+    -v, --verbose : Verbose mode for more detailed output
+
+🛡️ Built-in Safeguards
+
+    Current kernel protection: Prevents removal of the running kernel
+
+    Backup kernel: Ensures at least one alternate kernel is retained
+
+    Confirmation prompt: Asks for confirmation before deleting anything
+
+    Privilege check: Verifies root permissions when required
+
+    GRUB update: Automatically updates the bootloader after changes
+
+🔍 Example Usage
+
+# First, check current kernel status
+python3 kernel_cleaner.py --status
+
+# Then, simulate what would be removed
+python3 kernel_cleaner.py --dry-run
+
+# Finally, run the actual cleanup
+sudo python3 kernel_cleaner.py
+
+
