@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
 Désinstallateur automatique du plus ancien noyau Linux non utilisé
-Conçu pour Linux Mint
-Auteur: Assistant IA
+Conçu pour les systèmes basés sur DEBIAN
+Auteur: Nannouche
 """
 
 import os
