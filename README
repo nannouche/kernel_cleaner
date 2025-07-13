@@ -1,48 +1,3 @@
-📋 Utilisation
-Installation et exécution :
-
-# Sauvegarder le script
-chmod +x kernel_cleaner.py
-
-# Voir le statut des noyaux (sans privilèges root)
-python3 kernel_cleaner.py --status
-
-# Simulation (voir ce qui serait supprimé)
-python3 kernel_cleaner.py --dry-run
-
-# Suppression réelle (nécessite sudo)
-sudo python3 kernel_cleaner.py
-
-# Mode verbeux
-sudo python3 kernel_cleaner.py --verbose
-
-Options disponibles :
-
--s, --status : Affiche l'état des noyaux installés
--n, --dry-run : Simulation sans suppression réelle
--v, --verbose : Mode verbeux avec plus d'informations
-
-🛡️ Sécurités intégrées
-
-Protection du noyau actuel : Impossible de supprimer le noyau en cours
-Noyau de sauvegarde : Garde toujours au moins un noyau alternatif
-Confirmation : Demande confirmation avant toute suppression
-Vérification des privilèges : Vérifie les permissions root
-Mise à jour GRUB : Met à jour automatiquement le bootloader
-
-🔍 Exemple d'utilisation
-
-# D'abord, voir l'état actuel
-python3 kernel_cleaner.py --status
-
-# Ensuite, tester en mode simulation
-python3 kernel_cleaner.py --dry-run
-
-# Enfin, supprimer réellement
-sudo python3 kernel_cleaner.py
-
-----------------------------------------------------------------------------------
-
 📋 Usage
 Installation and Execution
 
@@ -90,6 +45,51 @@ python3 kernel_cleaner.py --status
 python3 kernel_cleaner.py --dry-run
 
 # Finally, run the actual cleanup
+sudo python3 kernel_cleaner.py
+
+----------------------------------------------------------------------------------
+
+📋 Utilisation
+Installation et exécution :
+
+# Sauvegarder le script
+chmod +x kernel_cleaner.py
+
+# Voir le statut des noyaux (sans privilèges root)
+python3 kernel_cleaner.py --status
+
+# Simulation (voir ce qui serait supprimé)
+python3 kernel_cleaner.py --dry-run
+
+# Suppression réelle (nécessite sudo)
+sudo python3 kernel_cleaner.py
+
+# Mode verbeux
+sudo python3 kernel_cleaner.py --verbose
+
+Options disponibles :
+
+-s, --status : Affiche l'état des noyaux installés
+-n, --dry-run : Simulation sans suppression réelle
+-v, --verbose : Mode verbeux avec plus d'informations
+
+🛡️ Sécurités intégrées
+
+Protection du noyau actuel : Impossible de supprimer le noyau en cours
+Noyau de sauvegarde : Garde toujours au moins un noyau alternatif
+Confirmation : Demande confirmation avant toute suppression
+Vérification des privilèges : Vérifie les permissions root
+Mise à jour GRUB : Met à jour automatiquement le bootloader
+
+🔍 Exemple d'utilisation
+
+# D'abord, voir l'état actuel
+python3 kernel_cleaner.py --status
+
+# Ensuite, tester en mode simulation
+python3 kernel_cleaner.py --dry-run
+
+# Enfin, supprimer réellement
 sudo python3 kernel_cleaner.py
 
 
